@@ -1,0 +1,70 @@
+@import "varaible";
+
+@mixin font-size($one,$two){
+    font-size:(($font-size)+($one*1px)-($two*1px));
+}
+
+@mixin button($padding,$bg-color,$color){
+    padding:$padding;
+    background-color:$bg-color;
+    color:$color;
+    border-color: $bg-color;
+}
+
+@mixin BTN {
+    @include button(0px,$blue-pramiray,$white);  
+    padding:14px 50px !important;   
+    margin:30px 0 !important;  
+    &:hover{
+        @include button(0px,$white !important,$blue-pramiray !important);  
+        padding:14px 50px !important;
+        border:1px solid $blue-pramiray !important;
+
+        @include MQ(1024px){
+            @include font-size(0,4);
+            padding:10px 40px;
+        }
+
+        @include MQ(769px){
+            @include font-size(0,4);
+            padding:8px 30px;
+        }
+    }  
+    @include MQ(1024px){
+        @include font-size(0,4);
+        padding:10px 40px;
+    }
+
+    @include MQ(769px){
+        @include font-size(0,4);
+        padding:8px 30px;
+        margin-top:15px;
+    }
+}
+
+@mixin MQ($media...){
+    @if length($media)==1{
+        @media screen and(max-width:$media){
+            @content;
+        }
+    }
+    @if length($media)==2{
+        @media screen and(max-width:$media) and (max-width:$media){
+            @content;
+        }
+    }
+}
+
+
+@mixin padding {
+    padding:$padding 0;
+    @include MQ(1024px){
+        padding:$padding-md;
+    }
+    @include MQ(768px){
+        padding:$padding-sm;
+    }
+}
+
+
+

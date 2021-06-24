@@ -1,0 +1,913 @@
+@import "varaible";
+@import "mixin";
+
+
+html,body{
+    margin:0;
+    padding:0;
+    font-family: "Times New Roman", Times, serif;;
+}
+
+p{
+    font-size:$paragraph;
+}
+
+h4{
+    font-size: $h4;
+}
+h5{
+    font-size:$h5;
+}
+
+.background{
+    background-color:$blue;
+    .background__nav{
+        padding:30px 0;
+        @include MQ(769px){
+            text-align:center;
+        }
+    }
+    
+    
+    
+    .background__item{
+        @include font-size(4,0);
+        color:$white;
+        .background__item--item{  
+            padding-right:$font-awesome;
+            
+        }
+    }
+    @include MQ(1024px){
+        @include font-size(2,0);
+    }
+    
+    @include MQ(769px){
+        @include font-size(0,0);
+    }
+    
+    .background__ul{
+        @include MQ(990px){
+            display: inline;
+        }
+        .background__ul--item{
+            color:$white !important;
+            @include font-size(0,2);
+            margin:0 10px;
+            display: inline-block;
+            &:hover{
+                color:$green !important;
+            }
+        }
+        
+        .background__ul--btn{
+            @include button(8px,$white,$blue);
+            @include font-size(0,8);
+            
+            
+            
+            &:hover{
+                @include button(8px,$green,$white);
+            }
+        }
+    }
+    .background__btn{
+        .background__btn--item{
+            @include font-size(4,0);
+            color:$white !important;
+            margin-right:5px;
+            
+        }
+    }
+    
+}
+
+
+.index{ 
+    margin-top:60px;
+    background-color:$blue;
+    height:100vh;
+    margin-bottom:60px;
+    
+    @include MQ(1000px){
+        margin-top:50px; 
+    }
+    
+    @include MQ(766px){
+        text-align: center;
+    }
+    .background__section1{
+        color:$white;
+        .background__scetion1--h1{
+            margin-top:140px;
+            @include font-size(20,0);
+            width:50%;
+            @include MQ(1024px){
+                margin-top:100px;
+                @include font-size(15,0);
+                width:50%;
+            }
+            @include MQ(769px){
+                margin-top:60px;
+                @include font-size(10,0);
+            }
+            @include MQ(767px){
+                @include font-size(10,0);
+                width:100%;
+                
+            }
+        }
+        .background__scetion1--p{
+            @include font-size(0,2);
+            margin-top:20px;
+            width:90%;
+            @include MQ(1024px){
+                margin-top:10px;
+                @include font-size(0,4);
+            }
+            
+            @include MQ(769px){
+                margin-top:5px;
+                @include font-size(0,6);
+            }
+            
+        }
+        .background__scetion1--btn{
+            @include button(0px,$white,$blue);
+            @include font-size(0,2);
+            padding:10px 50px;
+            margin-top:20px;
+            
+            
+            &:hover{
+                @include button(8px,$green,$white);
+                padding:10px 50px;
+            }
+            
+            @include MQ(1024px){
+                @include font-size(0,4);
+                padding:10px 40px;
+                margin-top:15px;
+            }
+            
+            @include MQ(769px){
+                @include font-size(0,4);
+                padding:8px 30px;
+                margin-top:10px;
+            }
+            
+        }
+        .background__section1--img{
+            width:500px;
+            height:96vh;
+            margin-top:90px;
+            @include MQ(1244px){
+                width:400px;
+                height:90vh;
+            }
+            @include MQ(1024px){
+                width:100%;
+            }
+            
+            
+            @include MQ(767px){
+                height:400px;
+                margin-top:50px;
+                
+            }
+        }
+    }
+}
+
+
+.section2{
+    @include padding;
+    h4{
+        font-size: $h4;
+        Span{
+            margin-right:$font-awesome;
+        }
+    }
+    h5{
+        font-size:$h5;
+    }
+    
+    .section__card{
+        margin:20px 10px;
+        padding:5px;
+        border:none;
+        .section1__body{
+            border-radius:4px;
+            box-shadow:0px 10px 20px 5px rgb(172, 179, 179);
+            .section1__body--span{
+                color:$red;
+                @include font-size(2,0)
+            }
+            b{
+                color:black;
+            }
+            h5{
+                color:$blue-pramiray;
+            }
+        }
+    }
+    
+    .section2__body{
+        border-radius:4px;
+        background-color:rgb(229, 238, 238);
+        .section2__body--span{
+            color:$green;
+            @include font-size(2,0)
+        }
+        
+        h5{
+            color:$green;
+        }
+        
+    }
+    .section3__body{
+        @extend .section2__body;
+        .section3__body--span{
+            color:rgb(8, 139, 58);
+            @include font-size(2,0)
+        }
+        
+        h5{
+            color:$blue-pramiray;
+        }
+        
+    }
+    
+}
+
+.section3{
+    @include padding;
+    h3{
+        width:40%;
+        font-size:$h3;
+        padding:5px 0 10px 0;
+        
+        @include MQ(1024px){
+            width:80%;
+            @include font-size(4,0);
+            
+        }
+        
+        @include MQ(769px){
+            margin-top:5px;
+            text-align:center;
+            width:100%;
+            
+        }
+    }
+    p{
+        width:60%;
+        color:$font-para;
+        padding:16px 0;
+        @include MQ(769px){
+            text-align:center;
+            width:100%;
+            
+        }
+    }
+    .section3__content{
+        .section3__content--span{
+            margin-right:$font-awesome;
+            color:$blue-pramiray;
+            
+        }
+        @include MQ(1024px){
+            @include font-size(0,4); 
+        }
+        
+        @include MQ(769px){
+            width:100%;
+            
+        }
+    }
+    
+    button{
+        @extend .background__scetion1--btn;
+        @include BTN;
+    }
+    img{
+        width:100%;
+        height:500px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        margin-bottom:40px;
+    }
+}
+
+.In-doctor{
+    background-color:rgba(6, 12, 34, 0.30) !important;
+    color:white !important;
+    position: absolute;
+    top:280px;
+    left:160px;
+    width:250px;
+    border:0;
+    border-radius:0;
+    &__title{
+        margin:20px;
+        background-color:rgba(6, 12, 34, 0.70);
+        & &--H6{
+            text-align:center;
+        }
+        & &--p{
+            color:white;
+            margin:0px;
+            padding:4px;
+            font-size:14px;
+            width:100%;
+        }
+    }
+    
+    @include MQ(1200px){
+        position: absolute;
+        top:270px;
+        left:130px;
+        width:240px;
+        &__title{
+            & &--p{
+                font-size:13px;
+            }
+        }
+    }
+    
+    @include MQ(1000px){
+        position: absolute;
+        top:260px;
+        left:80px;
+        width:200px;
+        &__title{
+            & &--p{
+                font-size:10px;
+            }
+        }
+    }
+    
+    @include MQ(767px){
+        margin-bottom:140px;
+        position: absolute;
+        top:280px;
+        left:160px;
+        width:250px;
+        &__title{
+            & &--p{
+                font-size:10px;
+            }
+        }
+    }
+    
+    @include MQ(480px){
+        position: absolute;
+        top:270px;
+        left:80px;
+        width:220px;
+    }
+}
+
+
+
+.section4{
+    @include padding;
+    padding-top:60px !important;
+    text-align:center;
+    
+    &__content{
+        margin:50px 0;
+        & &--h2{
+            width:50%;
+            margin:20px 0;
+            
+        }
+        & &--p{
+            width:60%;
+            margin:20px 0;
+            
+        }
+    }
+    
+    &__card{
+        margin:20px 10px;
+        padding:10px;
+        background-color:#e2e9e9 !important;
+        & &--span{
+            font-size:60px;
+        }
+        
+    }
+    
+    &__card-blue{
+        @extend .section4__card;
+        background-color:$blue-pramiray !important;
+        color:$white;
+    }
+    
+    &__btn{
+        @include button(0px,$blue-pramiray !important,$white !important);
+        @include font-size(0,2);
+        padding:10px 50px;
+        @include BTN;
+        margin:40px 0!important;
+        
+    }
+}
+
+
+
+.section5{
+    text-align:center;
+    color:$white;
+    background-image: url("../icon/bg.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    
+    #opacity{
+        @include padding;
+        background: rgba(10, 29, 78, 0.7);
+    }
+    &__h2{
+        margin:30px 0;
+    }
+    
+    &__div{
+        margin:20px 0;
+        &--h1{
+            font-weight:bold;
+            font-size:40px;
+            margin:20px 0;
+        }
+        &--h5{
+            margin:20px 0;
+        }
+    }
+    
+    
+    @include MQ(1024px){
+        &__h2{
+            margin:20px 0;
+        }
+        
+        &__div{
+            &--h1{
+                font-size:30px;
+                margin:15px 0;
+            }
+            &--h5{
+                margin:15px 0;
+            }
+        }
+        
+    }
+}
+
+
+.section6{
+    @include padding;
+    .content{
+        margin:50px 0;
+        text-align:center;
+        &__h3{
+            width:50%;
+            margin:20px 0;
+            
+        }
+        &__p{
+            width:60%;
+            margin:20px 0;
+            
+        }
+    }
+    
+    .section-card{
+        margin:20px 10px;
+        border:none;
+        
+        &__img{
+            width:100%;
+            height:300px;
+        }
+        &__item{
+            padding:20px 40px;
+            background-color:#e2e9e9 !important;
+            &--h6{
+                font-size:20px;
+                margin:0;
+            }
+            
+            
+            .section-ul{
+                padding:0;
+                margin:0;
+                &__a{
+                    text-decoration:none;
+                    list-style-type: none;
+                    width:22px;
+                    height:22px;
+                    text-align:center;
+                    display:inline-block;
+                    border-radius:360%;
+                    color:$white;
+                    font-size:14px;
+                    
+                    &--fb{
+                        background-color:rgb(31, 31, 94);
+                        margin-right:15px;
+                        &:hover{
+                            background-color:white;
+                            color:blue;
+                        }
+                    }
+                    &--int{
+                        background-color:rgb(102, 27, 27);
+                        margin-right:15px;
+                        &:hover{
+                            background-color:white;
+                            color:blue;
+                        }
+                    }
+                    &--link{
+                        background-color:rgb(31, 95, 255);;
+                        margin-right:15px;
+                        &:hover{
+                            background-color:white;
+                            color:blue;
+                        }
+                    }
+                    &--tw{
+                        background-color:rgba(31, 95, 255, 0.678);
+                        &:hover{
+                            background-color:white;
+                            color:blue;
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+        .shadows{
+            box-shadow:0px 10px 20px 10px #e2e9e9 !important;
+            background-color:$white !important;
+        }
+    }
+}
+
+
+
+.section7{
+    background-color:blue;
+    background-image:url('../icon/1.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    
+    .back{
+        @include padding;
+        background: rgba(10, 29, 78, 0.4);
+        color:$white;
+        
+        &__h3{
+            width:50%;
+            margin-top:120px;
+            font-size:30px;
+            
+            
+        }
+        
+        &__p{
+            margin:20px 0;
+            
+            width:90%;
+        }
+        
+        
+        @include MQ(991px){
+            &__h3{
+                width:100%;
+                margin-top:40px;
+                font-size:25px;
+                text-align:center;
+            }
+            
+            &__p{
+                margin:30px 0;
+                text-align: center;
+                width:100%;
+            }
+            
+            
+        }
+        
+        
+        
+        
+        .card{
+            background-color:$blue !important;
+            padding-top:30px;
+            
+            &__input-right{
+                padding:10px 5px 10px 50px;
+                
+                @include MQ(767px){
+                    padding:10px 40px !important;
+                }
+            }
+            
+            &__input-left{
+                padding:10px 50px 10px 5px;
+                
+                @include MQ(767px){
+                    padding:10px 40px !important;
+                }
+            }
+            
+            &__input{
+                
+                padding:20px;
+                font-size:14px;
+                border:none !important;
+                border-radius:none !important;
+                
+                &--span{
+                    background-color:white;;
+                }
+                
+            }
+            
+            &__card__icon{
+                background-color:white !important;
+                color:red !important;
+                padding-top:10px !important;
+            }
+            
+            &__textarea{
+                padding:10px 50px 10px 50px;
+                &--input{
+                    padding:15px 20px;
+                    font-size:14px;
+                }
+                
+                @include MQ(991px){
+                    padding:10px 50px !important;
+                }
+            }
+            
+            &__btn{
+                @include button(0px,$blue-pramiray !important,$white !important);
+                @include font-size(0,4);
+                padding:5px 50px;
+                @include BTN;
+                margin:10px 0 30px 0!important;
+            }
+        }
+        
+        
+        
+        
+        
+    }
+    
+}
+
+
+.section8{
+    @include padding;
+    
+    .widths{
+        text-align:center;
+        width:50%;
+        
+        &__h4{
+            font-weight:bold;
+            font-size:25px;
+            margin:60px 0 30px;
+        }
+        &__p{
+            margin-bottom:20px;
+        }
+        
+    }
+    
+    .cards{
+        background-color:#e2e9e9;
+        margin:0px;
+        float: right;
+        margin:10px !important;
+        border-radius:5px;
+        .img{
+            width:45%;
+            
+            @include MQ(346px){
+                width:100%;
+            }
+            
+            &__style{
+                width:100%; 
+                height:260px;
+                border-top-left-radius:5px;
+                border-bottom-left-radius:5px;
+                @include MQ(346px){
+                    height:180px;
+                    border-top-left-radius:5px;
+                    border-top-right-radius:5px;
+                    border-bottom-left-radius:0;
+                    
+                }
+            }
+        }
+        
+        .titles{
+            width:55%; 
+            padding:30px 20px;
+            
+            
+            
+            @include MQ(1199px){
+                padding:20px 15px;
+            }
+            @include MQ(991px){
+                padding:15px 10px;
+            }
+            
+            @include MQ(346px){
+                width:100%;
+            }
+            
+            
+            &__h6{
+                font-weight:bold;
+                @include MQ(991px){
+                    font-size:15px;
+                }
+            }
+            &__p-bag{
+                font-weight: bold;
+                font-size:14px;
+                
+                @include MQ(991px){
+                    font-size:12px;
+                }
+                
+            }
+            &__p{
+                float: left;
+                margin-right:60px;
+                font-size:16px;
+                
+                @include MQ(991px){
+                    margin-right:30px;
+                    font-size:14px;
+                }
+                @include MQ(351px){
+                    margin-right:10px;
+                    font-size:14px;
+                }
+                &--{
+                    margin-right:none;
+                }
+                
+            }
+            &__span{
+                margin-right:6px;
+                margin-left:5px;
+            }
+            
+            &__p-size{
+                font-size:13px;
+                @include MQ(991px){
+                    font-size:12px;
+                }
+            }
+        }
+        
+    }
+    #cards-item{
+        background-color:white;
+        box-shadow:0px 10px 20px 10px #e2e9e9 !important;
+    }
+}
+
+
+footer{
+    background-color:$blue;
+    @include padding;
+    color:$white;
+    .item{ 
+        &__logo{
+            @include font-size(4,0);
+            color:$white;
+            &--style{  
+                padding-right:$font-awesome;
+                
+                
+            }
+
+            &:hover{
+                color:$white !important;
+            }
+            
+            
+            
+        }
+        &__p{
+            font-size:12px;
+            
+        }
+        
+        &__p-p{
+            font-size:14px;
+            &--span{
+                margin-right:10px;
+                font-size:14px;
+            }
+        }
+        
+        @include MQ(991px){
+            margin-bottom:50px !important;
+        }
+    }
+    
+    
+    .ul{
+        list-style-type: none;
+        margin: 0;
+        margin-top:20px;
+        padding: 0;
+        &__li{
+            margin-bottom:10px;
+            &--a{
+                color:$white;
+                text-decoration: none !important;
+
+                &:hover{
+                   color:$green;
+                }
+            }
+        }
+    }
+    
+    .forms{
+        &__input{
+            padding:10px 20px;
+            font-size:12px;
+            margin:20px 0 !important;
+
+            &--span{
+                margin:19px 0 !important;
+                background-color:$blue-pramiray !important;
+                color:$white;
+                border:none !important;
+            }
+        }
+    }
+    
+    .section-ul{
+        padding:0;
+        margin:0;
+        @include MQ(991px){
+            margin-bottom:50px !important;
+        }
+        &__a{
+            margin-top:12px;
+            text-decoration:none;
+            list-style-type: none;
+            width:22px;
+            height:22px;
+            text-align:center;
+            display:inline-block;
+            border-radius:360%;
+            color:$white;
+            font-size:14px;
+            
+            &--fb{
+                background-color:rgb(31, 31, 94);
+                margin-right:15px;
+                &:hover{
+                    background-color:white;
+                    color:blue;
+                }
+            }
+            &--link{
+                background-color:rgb(31, 95, 255);;
+                margin-right:15px;
+                &:hover{
+                    background-color:white;
+                    color:blue;
+                }
+            }
+            &--tw{
+                background-color:rgba(31, 95, 255, 0.678);
+                &:hover{
+                    background-color:white;
+                    color:blue;
+                }
+            }
+            
+        }
+    }
+    
+}
